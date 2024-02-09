@@ -113,26 +113,53 @@
 
         }
 
-        function playGame (playerSelection, computerSelection)
+        function playGame (computerSelection)
         {
-            let outcome
+            let playerWins = 0
+            let computerWins = 0
+            let i = 0
+            let round
+            let outcome = ""
+            let printOutcome = ""
 
-            for (let i = 0; i < 5; i++)
+            while (i < 5)
             {
+                round = playRound(prompt(), computerSelection)
 
-                outcome = playRound(playerSelection, computerSelection)
-               
+                if (round == "player")
+                {
+                    playerWins += 1
+                }
+                else if (round == "computer")
+                {
+                    computerWins += 1
+                }
+
+                i++
             }
 
-            return outcome
+            if (playerWins > computerWins)
+            {
+                outcome = "You Won the Game!"
+            }
+            else if (computerWins > playerWins)
+            {
+                outcome = "You Lost the Game!"
+            }
+            else 
+            {
+                outcome = "It's a Tie! No one wins the Game."
+            }
+
+             return printOutcome = "You won " + playerWins + " rounds and the Computer won " + computerWins + ". " + outcome
+
         }
 
-        const playerSelection = "rock"
         const computerSelection = getComputerChoice()
 
-        console.log(playerSelection)
-        console.log(computerSelection)
-        console.log(playGame(playerSelection, computerSelection))
+        console.log(playGame(computerSelection))
+
+        
         
     </script>
 
