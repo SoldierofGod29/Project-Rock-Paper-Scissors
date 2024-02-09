@@ -10,10 +10,34 @@
 
     <script>
 
-        function playRPS () 
+        function getComputerChoice()
+        {
+            let randomNumber = Math.floor(Math.random() * 3)
+            let selection 
+
+            if (randomNumber == 0)
+            {
+                return selection = "rock"
+            }
+            if (randomNumber == 1)
+            {
+                return selection = "paper"
+            }
+            else
+            {
+                return selection = "scissors"
+            }
+
+        }
+
+        function playRound (playerSelection, computerSelection) 
         {
 
         }
+
+        const playerSelection = "rock"
+        const computerSelection = getComputerChoice()
+        console.log(computerSelection)
         
     </script>
 
