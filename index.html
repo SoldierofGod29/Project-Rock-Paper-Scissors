@@ -32,38 +32,78 @@
         function playRound (playerSelection, computerSelection) 
         {
             let outcome
+            let playersChoice = ""
+            let printPlayer = ""
+            let printComputer = ""
+            let i = 0
             
+            while (i < playerSelection.length)
+            {
+                playersChoice = playersChoice + playerSelection.charAt(i).toLowerCase()
+                i++
+            }
+            
+            i = 0
 
-            if (playerSelection == "rock" && computerSelection == "paper")
+            while (i < playerSelection.length)
+            {
+                if (i == 0)
+                {
+                    printPlayer = printPlayer + playerSelection.charAt(0).toUpperCase()
+                }
+                else 
+                {
+                    printPlayer = printPlayer + playerSelection.charAt(i).toLowerCase()
+                }
+                
+                i++
+            }
+
+            i = 0
+
+            while (i < computerSelection.length)
+            {
+                if (i == 0)
+                {
+                    printComputer = printComputer + computerSelection.charAt(0).toUpperCase()
+                }
+                else 
+                {
+                    printComputer = printComputer + computerSelection.charAt(i).toLowerCase()
+                }
+                
+                i++
+            }
+
+            if (playersChoice == "rock" && computerSelection == "paper")
             {
                 return outcome = "You Lose! Paper beats Rock"
             }
 
-            if (playerSelection == "paper" && computerSelection == "scissors")
+            if (playersChoice == "paper" && computerSelection == "scissors")
             {
                 return outcome = "You Lose! Scissors beat Paper"
             }
 
-            if (playerSelection == "scissors" && computerSelection == "rock")
+            if (playersChoice == "scissors" && computerSelection == "rock")
             {
                 return outcome = "You Lose! Rock beats Scissors"
             }
 
-            if (playerSelection == computerSelection)
+            if (playersChoice == computerSelection)
             {
                 return outcome = "It's a Tie! No one wins"
             }
             
             else 
             {
-                return outcome = "You win! " + playerSelection + " beats " + computerSelection
+                return outcome = "You win! " + printPlayer + " beats " + printComputer
             }
         }
 
-        const playerSelection = "rock"
+        const playerSelection = "Scissors"
         const computerSelection = getComputerChoice()
-        console.log(playerSelection)
-        console.log(computerSelection)
+        
         console.log(playRound(playerSelection, computerSelection))
         
     </script>
