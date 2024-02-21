@@ -113,54 +113,24 @@
 
         }
 
-        function playGame (computerSelection)
-        {
-            let playerWins = 0
-            let computerWins = 0
-            let i = 0
-            let round
-            let outcome = ""
-            let printOutcome = ""
+        const body = document.querySelector("body");
 
-            while (i < 5)
-            {
-                round = playRound(prompt(), computerSelection)
+        const buttonRock = document.createElement('button');
+        const buttonPaper = document.createElement('button');
+        const buttonScissors = document.createElement('button');
 
-                if (round == "player")
-                {
-                    playerWins += 1
-                }
-                else if (round == "computer")
-                {
-                    computerWins += 1
-                }
+        buttonRock.textContent = 'Rock';
+        buttonPaper.textContent = 'Paper';
+        buttonScissors.textContent = 'Scissors';
 
-                i++
-            }
-
-            if (playerWins > computerWins)
-            {
-                outcome = "You Won the Game!"
-            }
-            else if (computerWins > playerWins)
-            {
-                outcome = "You Lost the Game!"
-            }
-            else 
-            {
-                outcome = "It's a Tie! No one wins the Game."
-            }
-
-             return printOutcome = "You won " + playerWins + " rounds and the Computer won " + computerWins + ". " + outcome
-
-        }
-
-        const computerSelection = getComputerChoice()
-
-        console.log(playGame(computerSelection))
-
+        body.appendChild(buttonRock);
+        body.appendChild(buttonPaper);
+        body.appendChild(buttonScissors);
         
-        
+        buttonRock.addEventListener('click', );
+        buttonPaper.addEventListener('click', );
+        buttonScissors.addEventListener('click', );
+
     </script>
 
 </body>
