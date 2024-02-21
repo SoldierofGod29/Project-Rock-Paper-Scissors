@@ -29,7 +29,7 @@
             }
         }
 
-        function playRound (playerSelection, computerSelection) 
+        function playRound(playerSelection, computerSelection) 
         {
             let outcome
             let winner = ""
@@ -112,7 +112,7 @@
             }
 
         }
-
+        
         const body = document.querySelector("body");
 
         const buttonRock = document.createElement('button');
@@ -127,9 +127,21 @@
         body.appendChild(buttonPaper);
         body.appendChild(buttonScissors);
         
-        buttonRock.addEventListener('click', );
-        buttonPaper.addEventListener('click', );
-        buttonScissors.addEventListener('click', );
+        buttonRock.addEventListener('click', ()=>{
+            let playerSelection = 'rock';
+            
+            console.log(playRound(playerSelection, getComputerChoice()))
+        });
+        buttonPaper.addEventListener('click', ()=>{
+            let playerSelection = 'paper';
+            
+            console.log(playRound(playerSelection, getComputerChoice()))
+        });
+        buttonScissors.addEventListener('click', ()=>{
+            let playerSelection = 'scissors';
+            
+            console.log(playRound(playerSelection, getComputerChoice()))
+        });
 
     </script>
 
